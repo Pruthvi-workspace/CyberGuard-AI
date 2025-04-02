@@ -21,18 +21,18 @@ from supabase import create_client, Client
 from pydub import AudioSegment
 
 # Supabase Configuration
-supabase_url = "https://kyuubcusqtbczcexsire.supabase.co"
-supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt5dXViY3VzcXRiY3pjZXhzaXJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5MTk0NjIsImV4cCI6MjA1ODQ5NTQ2Mn0.rntfn9r-1VzKmL0OFG2Y-_JrjFycsuQX525UtTKGPUU"
+supabase_url = # supabase_url#
+supabase_key =  # supabase_key#
 supabase: Client = create_client(supabase_url, supabase_key)
 
 # SMTP Configuration
 SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
-SMTP_EMAIL = "madhurisabale09@gmail.com"
-SMTP_PASSWORD = "argigfabzyogwnyj"
+SMTP_PORT = # smtp_port#
+SMTP_EMAIL =# smtp_email#
+SMTP_PASSWORD = # smtp_password#
 
 # Initialize Gemini AI
-genai.configure(api_key="AIzaSyAWQiJDabf7L2Jh28vjg_qBz2LNeoeXSQ4")
+genai.configure(api_key=# api_key#)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Function to generate 5 tips using Gemini based on the category
