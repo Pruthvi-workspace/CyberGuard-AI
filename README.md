@@ -1,31 +1,44 @@
 
 
----
+CyberGuard AI - National Cyber Crime Reporting Portal
+🌟 Overview
+CyberGuard AI is a cutting-edge platform designed to revolutionize the way cybercrime complaints are reported, tracked, and managed. By harnessing the power of artificial intelligence—specifically Google’s Gemini AI—this platform offers an intuitive and secure interface for users to submit and monitor cybercrime complaints. Built with Streamlit for a user-friendly frontend and Supabase for secure data management, CyberGuard AI ensures that every complaint is processed efficiently, categorized accurately, and handled with the utmost care for user privacy and security.
+Key Benefits
+•	AI-Driven Categorization: Automatically classifies complaints using advanced AI, ensuring swift and accurate processing.
+•	User-Friendly Interface: Simplifies complaint submission with an intuitive design and support for multiple input methods (text, voice, files).
+•	Secure and Private: Protects sensitive user data with end-to-end encryption and compliance with privacy regulations.
+•	Real-Time Tracking: Provides transparency with real-time updates on complaint status.
+CyberGuard AI is more than just a reporting tool—it's a comprehensive solution empowering individuals and authorities to combat cybercrime effectively.
+________________________________________
+🔑 Features
+CyberGuard AI offers a robust set of features to streamline the cybercrime reporting process:
+•	Secure User Authentication: Protects access with Supabase Auth, supporting multi-factor authentication (MFA).
+•	Flexible Complaint Submission: Submit complaints via text, voice recordings, or file uploads, with multi-language support.
+•	AI-Powered Categorization: Leverages Google Gemini AI to categorize complaints (e.g., Cyber Harassment, Financial Fraud) accurately.
+•	Real-Time Complaint Tracking: Monitor complaint status updates instantly using a unique ticket ID.
+•	Secure Data Management: Stores data in Supabase with encryption, 
+•	User Dashboard: Centralized interface to manage complaints, view statuses, and access support resources.
+•	Multi-Language Support: Enhances accessibility for users worldwide.
+These features combine to deliver a powerful, accessible, and secure platform for addressing cybercrime.
+________________________________________
 
-```markdown
-<h1 align="center">CyberGuard AI 🚨🧠</h1>
 
-<p align="center">
-  <i>“AI-powered Cybercrime Complaint Portal for Safer Digital India”</i><br><br>
-  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Streamlit-Framework-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Gemini%20AI-Google-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Supabase-Database-green?style=for-the-badge" />
-</p>
-
----
-
-## 🧠 Project Title
-
-**CyberGuard AI: National Cybercrime Reporting Portal using Gemini AI + Streamlit + Supabase (Multi-language NLP, Voice + File input)**
-
----
-
-## 🛡️ Overview
-
-CyberGuard AI is a powerful and secure platform that enables citizens to report cybercrimes in multiple Indian languages using text, voice, or document uploads. The app uses Gemini AI for NLP-based categorization, and Supabase as a backend service for authentication, storage, and complaint tracking. The solution ensures accessibility, transparency, and ease of use — all through a single Python file (`app.py`).
-
----
+🚀 Workflows
+CyberGuard AI revolves around two core workflows: Complaint Submission and Complaint Tracking, designed for simplicity and efficiency.
+Complaint Submission Workflow
+1.	Log In: Access the platform with secure credentials.
+2.	Select Language: Choose your preferred language for the interface.
+3.	Choose Input Method: 
+o	AI Chatbot: Answer guided questions via a conversational interface powered by NLP.
+o	Manual Form: Fill out a structured form with complaint details.
+4.	Provide Details: Submit text, voice recordings, or files (e.g., screenshots).
+5.	Review and Submit: Confirm accuracy and send the complaint.
+6.	Receive Ticket ID: Get a unique ID for tracking.
+Complaint Tracking Workflow
+1.	Log In: Sign into your account.
+2.	Navigate to Track Complaint: Access the tracking section from the dashboard.
+3.	Enter Ticket ID: Input your unique ID.
+4.	View Status: Check real-time updates (e.g., "Under Review," "Resolved").
 
 ## 💥 Key Features
 
