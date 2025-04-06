@@ -157,9 +157,11 @@ Streamlit Cloud
 4.	Click Deploy
 ✅ Supports custom Docker or VPS setups too.
 ________________________________________
-🎬 Demo Video
-📺 Watch the Demo Video
-See CyberGuard AI in action.
+## 🔗 Links
+
+
+- 🎬 [Demo Video on Google Drive](https://drive.google.com/drive/folders/1DyI5qzy40ks3LV69vTq5YpW-f8gLjbCL)
+
 ________________________________________
 🙏 Acknowledgements
 •	Streamlit – UI framework
