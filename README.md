@@ -1,172 +1,165 @@
 
-🌐 CyberGuard AI – National Cyber Crime Reporting Portal
-________________________________________
-🌟 Overview
-CyberGuard AI is a next-gen platform that simplifies and secures the process of reporting cybercrimes. Powered by Google Gemini AI and built using Streamlit and Supabase, it ensures that every complaint is categorized intelligently, tracked in real-time, and stored with full privacy compliance.
-🔑 Key Benefits
-•	AI-Driven Categorization – Automatically detects and classifies complaints using Gemini AI.
-•	User-Friendly Interface – Submit reports via text, voice, or file uploads with multilingual support.
-•	Secure & Private – End-to-end encryption and GDPR/CCPA compliant.
-•	Real-Time Tracking – Get live updates on your complaint status using a unique ticket ID.
-CyberGuard AI is not just a tool—it’s a digital guardian for cybercrime victims.
-________________________________________
-🔐 Features
-•	Secure User Authentication – Supabase Auth with MFA and OAuth.
-•	Multi-Mode Complaint Submission – Via chatbot, manual form, or voice input.
-•	AI-Powered Categorization – Classifies types like Phishing, Harassment, etc.
-•	Complaint Tracking – Track progress via dashboard using ticket ID.
-•	Data Encryption & Compliance – GDPR, CCPA, AES-256 at rest, TLS 1.3 in transit.
-•	Multilingual UI – Supports submission in 22 regional Indian languages.
-•	PDF Confirmation Reports – Automatically generated using ReportLab.
-________________________________________
-🚀 Workflows
-Complaint Submission
-1.	Login
-2.	Select Language
-3.	Choose Input Method
-o	AI Chatbot
-o	Manual Form
-4.	Submit Details
-o	Text, Voice, or File Upload
-5.	Receive Ticket ID
-6.	Track via Dashboard
-Complaint Tracking
-1.	Login
-2.	Navigate to 'Track Complaint'
-3.	Enter Ticket ID
-4.	View Real-Time Status
-📊 Text-Based Diagram:
-[User] --> [Login] --> [Select Language] --> [Input Method: Chatbot/Form] --> [Submit Details] --> [Ticket ID] --> [Track Status]
-________________________________________
-💻 Technology Stack
-•	Frontend: Streamlit
-•	Backend: Python (FastAPI/Flask)
-•	AI: Google Gemini AI
-•	Database: Supabase (PostgreSQL + Auth)
-•	Voice Input: SpeechRecognition, pyaudio
-•	PDF Generation: ReportLab
-•	Text-to-Speech: gTTS (optional)
-________________________________________
-🏗️ Architecture
-+--------------------+
-| Client Layer       | (Streamlit UI)
-+--------------------+
-           ↓
-+--------------------+
-| API Layer          | (Python - FastAPI)
-+--------------------+
-           ↓
-+--------------------+
-| Processing Layer   | (Google Gemini AI)
-+--------------------+
-           ↓
-+--------------------+
-| Data Storage Layer | (Supabase DB)
-+--------------------+
-________________________________________
-📝 Usage Guide
-Submit a Complaint
-1.	Login
-2.	Select Language
-3.	Choose Input Method (Chatbot/Form)
-4.	Provide Details (Text/Voice/File)
-5.	Review and Submit
-6.	Note the Ticket ID
-Track a Complaint
-1.	Login
-2.	Go to "Track Complaint"
-3.	Enter Ticket ID
-4.	View Status Updates
-💡 Always save your ticket ID securely.
-________________________________________
-🛡️ Security & Privacy
-•	Encryption: AES-256 at rest, TLS 1.3 in transit
-•	Authentication: MFA via Supabase Auth
-•	Data Control: Users can delete/anonymize data
-•	Compliance: GDPR + CCPA aligned
-•	Minimal Data Collection: Only essential information stored
-________________________________________
-🧠 AI-Powered Intelligence
-•	Complaint Categorization – Uses Gemini AI to tag cybercrime types.
-•	NLP Understanding – Processes both typed and spoken complaints.
-•	Key Info Extraction – Auto-extracts names, dates, keywords.
-🔍 Example:
-User Input: "Someone emailed me asking for bank details pretending to be SBI."
-Gemini Classifies: Phishing
-________________________________________
-📁 Project Structure
-Monolithic Setup – All-in-One app.py
-•	Core File: app.py
-o	Imports & Config (Supabase, Gemini, SMTP)
-o	AI Functions
-o	Speech-to-Text Utility
-o	Dashboard UI & Logic
-o	Session State Handlers
-•	Optional Files:
-o	requirements.txt
-o	.env
-o	.gitignore
-o	README.md
-Database Schema (Supabase SQL)
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  username TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL,
-  email TEXT UNIQUE NOT NULL
-);
 
-CREATE TABLE complaints (
-  id SERIAL PRIMARY KEY,
-  ticket_id TEXT UNIQUE NOT NULL,
-  data JSONB NOT NULL,
-  translated_data JSONB NOT NULL,
-  status TEXT NOT NULL,
-  date_filed TEXT NOT NULL,
-  last_updated TEXT NOT NULL
-);
-________________________________________
-⚙️ Setup Guide
-1. Install Dependencies
-sudo apt-get install portaudio19-dev   # Linux
-brew install portaudio                 # macOS
-pip install pyaudio                   # Windows
+---
+
+```markdown
+<h1 align="center">CyberGuard AI 🚨🧠</h1>
+
+<p align="center">
+  <i>“AI-powered Cybercrime Complaint Portal for Safer Digital India”</i><br><br>
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Streamlit-Framework-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Gemini%20AI-Google-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Supabase-Database-green?style=for-the-badge" />
+</p>
+
+---
+
+## 🧠 Project Title
+
+**CyberGuard AI: National Cybercrime Reporting Portal using Gemini AI + Streamlit + Supabase (Multi-language NLP, Voice + File input)**
+
+---
+
+## 🛡️ Overview
+
+CyberGuard AI is a powerful and secure platform that enables citizens to report cybercrimes in multiple Indian languages using text, voice, or document uploads. The app uses Gemini AI for NLP-based categorization, and Supabase as a backend service for authentication, storage, and complaint tracking. The solution ensures accessibility, transparency, and ease of use — all through a single Python file (`app.py`).
+
+---
+
+## 💥 Key Features
+
+- ✅ Submit complaints in 22 Indian languages via **text, voice (STT)**, or **file uploads (PDF/Images)**
+- ✅ **AI categorization** of complaint type using Google Gemini NLP
+- ✅ Real-time complaint **ticket generation and tracking**
+- ✅ Multilingual **confirmation email** with official ticket number
+- ✅ Built-in **speech-to-text**, **OCR**, and **language translation**
+- ✅ Admin dashboard for **status update**, **ticket view**, and **filters**
+- ✅ Streamlit UI with **tabs**, **themed display**, and **structured workflows**
+- ✅ Supabase: secure backend for data storage, auth, and ticket logs
+- ✅ OTP login (optional), email notifications (optional), single-file app
+
+---
+
+## 🌍 Supported Indian Languages (22)
+
+Hindi, Konkani, Kannada, Dogri, Bodo, Urdu, Tamil, Kashmiri, Assamese, Bengali, Marathi, Sindhi, Maithili, Punjabi, Malayalam, Manipuri, Telugu, Sanskrit, Nepali, Santali, Gujarati, Odia.
+
+---
+
+
+## 🏗️ App Architecture
+
+```mermaid
+flowchart TB
+    A[User Input<br>(Text/Voice/File)] --> B[Preprocessing]
+    B --> C[Language Detection<br>& Translation]
+    C --> D[Gemini AI<br>Classification]
+    D --> E[Supabase Storage]
+    E --> F[Email Notification<br>with Ticket ID]
+    F --> G[Track Complaint Status]
+```
+
+---
+
+## ⚙️ Technologies Used
+
+| Component      | Stack Used          |
+|----------------|---------------------|
+| Frontend       | Streamlit (Python)  |
+| AI/NLP Engine  | Gemini API          |
+| Database       | Supabase  |
+| File Parsing   | pytesseract, pdfminer |
+| Voice Input    | speech_recognition   |
+| Email Service  | SMTP / Supabase Mail |
+| Translation    | gemini       |
+| Others         | dotenv, requests, uuid |
+
+---
+
+## 📁 Folder Structure
+
+```
+CyberGuard-AI/
+│
+├── app.py                 # Main app file with all logic (Streamlit)
+├── .env                  # Stores API keys and Supabase secrets
+├── requirements.txt       # Python dependencies
+├── helpers/
+│   ├── nlp_utils.py       # Gemini AI classification functions
+│   ├── lang_utils.py      # Language detection + translation
+│   ├── file_parser.py     # OCR + PDF parsing
+│   ├── audio_parser.py    # Voice input handling
+│   └── supabase_client.py # Auth + storage functions
+├── assets/
+│   ├── logo.png           # Logo for UI
+│   └── sample_uploads/    # Sample complaint docs
+```
+
+---
+
+## 🛠️ How to Run
+
+```bash
+git clone https://github.com/your-username/CyberGuard-AI.git
+cd CyberGuard-AI
 pip install -r requirements.txt
-2. Setup Environment
-touch .env
-# Add the following
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
-SMTP_EMAIL=your_email@example.com
-SMTP_PASSWORD=your_smtp_password
-GEMINI_API_KEY=your_gemini_api_key
-3. Run App
 streamlit run app.py
+```
+
+Make sure to add your credentials in a `.env` file:
+
+```
+SUPABASE_URL=...
+SUPABASE_KEY=...
+GEMINI_API_KEY=...
+```
+
+---
+
+## 📊 Complaint Workflow
+
+1. User visits the portal
+2. Enters complaint via:
+   - Text
+   - Voice (converted to text)
+   - File (image/PDF converted to text via OCR)
+3. Language is auto-detected and translated to English
+4. Gemini AI processes and classifies the complaint
+5. Data is stored securely in Supabase
+6. User receives ticket number + confirmation in original language
+7. User can track complaint using ticket ID
+
+---
+
 ________________________________________
 🔌 API Integrations
-•	Google Gemini AI – Complaint classification, NLP
-•	Supabase – Auth, Database
-•	SpeechRecognition – Voice input support
-•	gTTS – Voice output (optional)
-•	ReportLab – PDF confirmation reports
+•	Google Gemini AI: Categorization and NLP.
+•	Supabase: Database, authentication, and storage.
+•	SpeechRecognition: Voice-to-text conversion (optional).
+•	gTTS: Text-to-speech (optional).
+•	ReportLab: PDF report generation.
+These integrations drive the platform’s core capabilities.
 ________________________________________
 🌐 Deployment Options
 Streamlit Cloud
-1.	Push to GitHub
-2.	Connect to Streamlit Cloud
-3.	Add Secrets (.env values)
-4.	Click Deploy
-✅ Supports custom Docker or VPS setups too.
-________________________________________
+1.	Push to GitHub: Upload code to a GitHub repository.
+2.	Connect to Streamlit Cloud: Link your repo in the Streamlit Cloud dashboard.
+3.	Configure Secrets: Add API keys (e.g., Supabase, Gemini) securely.
+4.	Deploy: Launch the app with one click.
+Alternative options include Docker or VPS deployment for custom setups.
+
+
 ## 🔗 Links
 
 
 - 🎬 [Demo Video on Google Drive](https://drive.google.com/drive/folders/1DyI5qzy40ks3LV69vTq5YpW-f8gLjbCL)
 
-________________________________________
-🙏 Acknowledgements
-•	Streamlit – UI framework
-•	Supabase – Backend-as-a-Service
-•	Google Gemini – AI-powered categorization
-•	Python Community – Open-source libraries
-________________________________________.
+
+
+
+<p align="center">
+  Built for 🇮🇳 India | Empowering citizens against digital crime 💻🔒
+</p>
+```
 
