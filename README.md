@@ -1,8 +1,3 @@
-Here’s your complete **GitHub-friendly README** with proper formatting, badges, and visual structure while **preserving all original content**. It uses GitHub-compatible markdown, avoids broken badge logos, and improves readability for GitHub display:
-
----
-
-```markdown
 <h1 align="center">🛡️ CyberGuard AI - National Cyber Crime Reporting Portal</h1>
 <h3 align="center">AI-Powered Cybercrime Reporting Solution with Gemini Integration</h3>
 
@@ -43,11 +38,10 @@ CyberGuard AI is more than just a reporting tool—it's a comprehensive solution
 - ✅ Admin dashboard for **status update**, **ticket view**, and **filters**  
 - ✅ Streamlit UI with **tabs**, **themed display**, and **structured workflows**  
 - ✅ Supabase: secure backend for data storage, auth, and ticket logs  
-- ✅ OTP login (optional), email notifications (optional), single-file app
+- ✅ OTP login (optional), email notifications (optional), single-file app  
 
-```text
-[User] → [Secure Login] → [AI Chatbot] → [Automated Categorization] → [Real-Time Tracking]
-```
+➡️ **Complaint Flow**:  
+👤 **User** → 🔐 **Secure Login** → 🤖 **AI Chatbot** → 🧠 **Automated Categorization** → 📊 **Real-Time Tracking**
 
 ---
 
